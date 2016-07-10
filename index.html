@@ -1,7 +1,109 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html ng-app="bbApp">
+
+  <head>
+    <link href="https://jpmck.github.io/bb.css/css/bb.min.css" rel="stylesheet">
+    <link href="css/bb-github.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro%7CSource+Sans+Pro%7CSource+Serif+Pro" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+    <link href="http://cdn.jsdelivr.net/devicons/1.8.0/css/devicons.min.css" rel="stylesheet">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-route.min.js"></script>
+
+    <title>jpmck.com</title>
+  </head>
+
   <body>
-    <h1>Hello World</h1>
-    <p>I'm hosted with GitHub Pages... This is changed.</p>
+    <script type="text/ng-template" id="home.html">
+      <section>
+        <article>
+          <h2>Hello World!</h2>
+          <p>Welcome to my GitHub.</p>
+
+        </article>
+      </section>
+    </script>
+
+    <script type="text/ng-template" id="projects.html">
+      <section>
+        <article>
+          Below are my projects that have a github.io page.
+        </article>
+      </section>
+
+      <section>
+        <article class="one-half">
+          <h3>bb.css</h3>
+          <img src="https://www.jpmck.com/img/thmb_bb_css.png" alt="bb.css">
+          <p>
+            <span class="devicons devicons-css3 fa-2x"></span>
+            <span class="devicons devicons-responsive fa-2x"></span>
+            <span class="devicons devicons-github_badge fa-2x"></span>
+          </p>
+          <p>
+            bb.css is a bare bones css framework.
+          </p>
+          See <a href="/bb.css/">bb.css</a> on github.io.
+        </article>
+      </section>
+    </script>
+
+    <script type="text/ng-template" id="contact.html">
+      <section>
+        <article class="one-whole">
+          <h2>Contact</h2>
+          <p>Feel free to get a hold of me.</p>
+        </article>
+
+        <article class="one-fifth contact-align">
+          <a class="contact-icon" href="https://github.com/jpmck" target="_blank"><i class="devicons devicons-github_badge fa-4x fa-fw"></i><br>GitHub</a>
+        </article>
+
+        <article class="one-fifth contact-align">
+          <a class="contact-icon" href="https://codepen.io/jpmck" target="_blank"><i class="devicons devicons-codepen fa-4x fa-fw"></i><br>Codepen</a>
+        </article>
+
+        <article class="one-fifth contact-align">
+          <a class="contact-icon" href="https://linkedin.com/in/jpmck" target="_blank"><i class="fa fa-linkedin-square fa-4x fa-fw"></i><br>LinkedIn</a>
+        </article>
+
+        <article class="one-fifth contact-align">
+          <a class="contact-icon" href="https://google.com/+JimMcKenna" target="_blank"><i class="fa fa-google-plus-official fa-4x fa-fw"></i><br>Google Plus</a>
+        </article>
+
+        <article class="one-fifth contact-align">
+          <a class="contact-icon" href="https://www.jpmkc.com/" target="_blank"><i class="fa fa-globe fa-4x fa-fw"></i><br>jpmck.com</a>
+        </article>
+      </section>
+    </script>
+
+    <header>
+      <h1>jpmck.github.io</h1>
+
+      <nav>
+        <ul>
+          <li><a href="#/"><i class="fa fa-home fa-fw" aria-hidden="true"></i> home</a></li>
+          <li><a href="#/projects"><i class="fa fa-code fa-fw" aria-hidden="true"></i> projects</a></li>
+          <li><a href="#/contact"><i class="fa fa-paper-plane fa-fw" aria-hidden="true"></i> contact</a></li>
+          <li><a href="https://github.com/jpmck/"><i class="fa fa-github fa-fw" aria-hidden="true"></i> GitHub</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div ng-view></div>
+    </main>
+
+    <footer>
+      Copyright &copy; 2016, Jim McKenna.<br>
+      This work is licensed under the MIT License.
+    </footer>
+
+    <script src="jpmck.js"></script>
   </body>
+
 </html>
